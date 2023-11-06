@@ -1,0 +1,232 @@
+$color-scale-black: #010409;
+$color-scale-white: #ffffff;
+$color-scale-gray-0: #f0f6fc;
+$color-scale-gray-1: #c9d1d9;
+$color-scale-gray-2: #b1bac4;
+$color-scale-gray-3: #8b949e;
+$color-scale-gray-4: #6e7681;
+$color-scale-gray-5: #484f58;
+$color-scale-gray-6: #30363d;
+$color-scale-gray-7: #21262d;
+$color-scale-gray-8: #161b22;
+$color-scale-gray-9: #0d1117;
+$color-scale-blue-0: #cae8ff;
+$color-scale-blue-1: #a5d6ff;
+$color-scale-blue-2: #79c0ff;
+$color-scale-blue-3: #58a6ff;
+$color-scale-blue-4: #388bfd;
+$color-scale-blue-5: #1f6feb;
+$color-scale-blue-6: #1158c7;
+$color-scale-blue-7: #0d419d;
+$color-scale-blue-8: #0c2d6b;
+$color-scale-blue-9: #051d4d;
+$color-scale-green-0: #aff5b4;
+$color-scale-green-1: #7ee787;
+$color-scale-green-2: #56d364;
+$color-scale-green-3: #3fb950;
+$color-scale-green-4: #2ea043;
+$color-scale-green-5: #238636;
+$color-scale-green-6: #196c2e;
+$color-scale-green-7: #0f5323;
+$color-scale-green-8: #033a16;
+$color-scale-green-9: #04260f;
+$color-scale-yellow-0: #f8e3a1;
+$color-scale-yellow-1: #f2cc60;
+$color-scale-yellow-2: #e3b341;
+$color-scale-yellow-3: #d29922;
+$color-scale-yellow-4: #bb8009;
+$color-scale-yellow-5: #9e6a03;
+$color-scale-yellow-6: #845306;
+$color-scale-yellow-7: #693e00;
+$color-scale-yellow-8: #4b2900;
+$color-scale-yellow-9: #341a00;
+$color-scale-orange-0: #ffdfb6;
+$color-scale-orange-1: #ffc680;
+$color-scale-orange-2: #ffa657;
+$color-scale-orange-3: #f0883e;
+$color-scale-orange-4: #db6d28;
+$color-scale-orange-5: #bd561d;
+$color-scale-orange-6: #9b4215;
+$color-scale-orange-7: #762d0a;
+$color-scale-orange-8: #5a1e02;
+$color-scale-orange-9: #3d1300;
+
+.all {
+    overflow: hidden;
+}
+
+
+.main {
+    display: flex;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-scale-gray-8;
+    width: 36vw;
+    height: 70vh;
+    padding: 7vw;
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        border-radius: 1vw;
+        padding: 8vw 4vw;
+        background-color: $color-scale-gray-9;
+
+        .hero {
+            color: $color-scale-white;
+            font-family: 'Sofia';
+            font-size: 3vw;
+        }
+
+        .text-box {
+            color: $color-scale-gray-2;
+            font-weight: 100;
+            font-family: 'Gabarito';
+            font-size: 1.3vw;
+            letter-spacing: 0.1vw;
+            line-height: 2vw;
+
+            a {
+                font-weight: 600;
+                text-decoration: none;
+                color: $color-scale-blue-1;
+                border-radius: 1vw;
+                transition: color 0.1s;
+            }
+
+            a:hover {
+                color: $color-scale-white;
+            }
+        }
+    }
+}
+
+.right {
+    width: 50%;
+    background-image: url(../../../assets/NewSoulBG.gif);
+    background-size: cover;
+
+    .blur {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+
+        .mark-calendar {
+            background-color: $color-scale-gray-9;
+            padding: 4vw 2vw;
+            color: $color-scale-white;
+            font-family: 'Gabarito';
+
+            .card {
+
+             
+
+            }
+        }
+
+
+
+        p-datepicker-monthpicker {
+            background-color: cornflowerblue;
+            font-size: 2vw;
+        }
+
+        .selection {
+            display: flex;
+            flex-direction: column;
+            gap: 2vw;
+            padding: 8vw 4vw;
+            border-radius: 1vw;
+            background-color: $color-scale-gray-9;
+            color: $color-scale-white;
+            z-index: 4;
+            position: relative;
+
+            label {
+                font-size: 2vw;
+                font-family: 'Sofia';
+            }
+
+
+
+            select {
+                cursor: pointer;
+                border: none;
+                border-radius: 0.6vw;
+                padding: 0.8vw 1vw;
+                width: 20vw;
+                appearance: none;
+                background-color: $color-scale-gray-7;
+                outline: none;
+                font-family: 'Gabarito';
+                color: $color-scale-gray-0;
+                font-size: 1.2vw;
+                letter-spacing: 0.1vw;
+
+            }
+
+            button {
+                border: none;
+                background-color: $color-scale-blue-9;
+                color: $color-scale-blue-3;
+                padding: 1vw;
+                border-radius: 1vw;
+                font-size: 1.3vw;
+                font-weight: 600;
+                letter-spacing: 0.1vw;
+                font-family: 'Gabarito';
+                box-shadow: none;
+                transition: color 0.2s ease-out, background-color 0.2s ease-out, box-shadow 0.2s ease-out;
+            }
+
+            button:hover {
+                cursor: pointer;
+                color: $color-scale-white;
+                background-color: $color-scale-blue-5;
+                box-shadow: 0 2px 8px 0 $color-scale-black;
+
+            }
+
+
+        }
+
+        .selection::before,
+        .selection::after {
+            --size: 0.3rem;
+            position: absolute;
+            content: "";
+            pointer-events: none;
+            cursor: pointer;
+        }
+
+        .selection::before {
+            border-left: var(--size) solid transparent;
+            border-right: var(--size) solid transparent;
+            border-bottom: var(--size) solid $color-scale-gray-2;
+            top: 14vw;
+            left: 22.5vw;
+        }
+
+        .selection::after {
+            border-left: var(--size) solid transparent;
+            border-right: var(--size) solid transparent;
+            border-top: var(--size) solid $color-scale-gray-2;
+            top: 15vw;
+            left: 22.5vw;
+        }
+    }
+}
+
+:host ::ng-deep .p-calendar .p-button {
+    /* Customize the calendar navigation buttons */
+    background-color: #007bff;
+    color: #fff;
+  }

@@ -1,0 +1,32 @@
+<div class="all">
+  <app-navbar></app-navbar>
+  <div class="main">
+    <div class="left">
+      <div class="text-container">
+        <div class="hero">Mark your Presence</div>
+        <div class="text-box">
+          Let us know about your presences. It's what makes this place special,
+          and lights <a href="../presences">Soul City</a> up.
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="blur">
+        <div class="selection" *ngIf="disabled">
+          <label for="userDropdown">Select User:</label>
+          <select id="userDropdown" [(ngModel)]="selectedUserId" name="selectedUser" aria-controls="select-dropdown">
+            <option value="" disabled>Select a user</option>
+            <option *ngFor="let soul of soulsData" [value]="soul.uuid">{{ soul.uuid }} : {{ soul.name }}</option>
+          </select>
+          <button (click)="markAttendance()">PROCEED</button>
+        </div>
+        <div class="mark-calendar" *ngIf="!disabled">
+          <div class="card flex justify-content-center">
+            <p-calendar class="max-w-full" (click)="datePicked()" [(ngModel)]="date" [inline]="true" [showWeek]="true"></p-calendar>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

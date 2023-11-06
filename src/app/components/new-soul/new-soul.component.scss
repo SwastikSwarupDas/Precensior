@@ -1,0 +1,207 @@
+$color-scale-black: #010409;
+$color-scale-white: #ffffff;
+$color-scale-gray-0: #f0f6fc;
+$color-scale-gray-1: #c9d1d9;
+$color-scale-gray-2: #b1bac4;
+$color-scale-gray-3: #8b949e;
+$color-scale-gray-4: #6e7681;
+$color-scale-gray-5: #484f58;
+$color-scale-gray-6: #30363d;
+$color-scale-gray-7: #21262d;
+$color-scale-gray-8: #161b22;
+$color-scale-gray-9: #0d1117;
+$color-scale-blue-0: #cae8ff;
+$color-scale-blue-1: #a5d6ff;
+$color-scale-blue-2: #79c0ff;
+$color-scale-blue-3: #58a6ff;
+$color-scale-blue-4: #388bfd;
+$color-scale-blue-5: #1f6feb;
+$color-scale-blue-6: #1158c7;
+$color-scale-blue-7: #0d419d;
+$color-scale-blue-8: #0c2d6b;
+$color-scale-blue-9: #051d4d;
+$color-scale-green-0: #aff5b4;
+$color-scale-green-1: #7ee787;
+$color-scale-green-2: #56d364;
+$color-scale-green-3: #3fb950;
+$color-scale-green-4: #2ea043;
+$color-scale-green-5: #238636;
+$color-scale-green-6: #196c2e;
+$color-scale-green-7: #0f5323;
+$color-scale-green-8: #033a16;
+$color-scale-green-9: #04260f;
+$color-scale-yellow-0: #f8e3a1;
+$color-scale-yellow-1: #f2cc60;
+$color-scale-yellow-2: #e3b341;
+$color-scale-yellow-3: #d29922;
+$color-scale-yellow-4: #bb8009;
+$color-scale-yellow-5: #9e6a03;
+$color-scale-yellow-6: #845306;
+$color-scale-yellow-7: #693e00;
+$color-scale-yellow-8: #4b2900;
+$color-scale-yellow-9: #341a00;
+$color-scale-orange-0: #ffdfb6;
+$color-scale-orange-1: #ffc680;
+$color-scale-orange-2: #ffa657;
+$color-scale-orange-3: #f0883e;
+$color-scale-orange-4: #db6d28;
+$color-scale-orange-5: #bd561d;
+$color-scale-orange-6: #9b4215;
+$color-scale-orange-7: #762d0a;
+$color-scale-orange-8: #5a1e02;
+$color-scale-orange-9: #3d1300;
+
+.all{
+    overflow-x: hidden;
+}
+
+.main {
+
+    overflow: hidden;
+
+    background-image: url(../../../assets/NewSoulBG.gif);
+    background-size: cover;
+
+    .blur {
+
+        height: 100%;
+        backdrop-filter: blur(10px);
+
+        .top-row {
+
+            display: flex;
+            justify-content: space-between;
+            font-size: 3vw;
+            font-family: 'Sofia';
+
+            .link  {
+                font-size: 1vw;
+                font-family: 'Gabarito';
+                color: $color-scale-gray-3;
+                letter-spacing: 0.1vw;
+                
+                a{
+                    background-color: $color-scale-gray-8;
+                    padding: 0.4vw 1vw;
+                    border-radius: 0.8vw;
+                    text-decoration: none;
+                    color: $color-scale-blue-1;
+                    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+                }
+                
+                a:hover{
+                    color: $color-scale-blue-9;
+                    background-color: $color-scale-blue-3;
+                }
+            }
+
+            .logo {
+                a {
+                    text-decoration: none;
+                    color: $color-scale-white;
+                }
+            }
+
+            padding: 2vw 3vw;
+        }
+
+        .page-div {
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 90vh;
+
+            form {
+                margin-top: -6vw;
+                display: flex;
+                flex-direction: column;
+                gap: 2vw;
+                background-color: $color-scale-gray-7;
+                padding: 2vw 2vw;
+                border-radius: 1vw;
+
+                .form-title{
+                    font-family: 'Sofia';
+                    color: $color-scale-gray-3;
+                    font-size: 2vw;
+                }
+
+                input {
+                    border-radius: 0.4vw;
+                    border: none;
+                    outline: none;
+                    width: 20vw;
+                    padding: 1vw;
+                    background-color: $color-scale-gray-8;
+                    caret-color: $color-scale-gray-3;
+                    color: $color-scale-gray-2;
+                    font-size: 1vw;
+                    letter-spacing: 0.1vw;
+                    font-family: 'Gabarito';
+                    font-weight: 100;
+                }
+
+                .id{
+                    cursor:not-allowed;
+                }
+
+                ::placeholder {
+                    color: $color-scale-gray-5;
+                    font-size: 1vw;
+                    letter-spacing: 0.1vw;
+                    font-family: 'Gabarito';
+                    font-weight: 100;
+                }
+
+                .generate{
+                    border: none;
+                    padding: 0.8vw 1vw;
+                    font-weight: 600;
+                    color: $color-scale-gray-1;
+                    letter-spacing: 0.1vw;
+                    border-radius: 0.4vw;
+                    background-color: $color-scale-orange-7;
+                    font-family: 'Gabarito';
+                    font-size: 1.2vw;
+                    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+                    box-shadow: none;
+                }
+
+                .generate:hover{
+                    cursor: pointer;
+                    background-color: $color-scale-orange-6;
+                    color: $color-scale-white;
+                    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.3);
+                }
+
+                button {
+                    border: none;
+                    padding: 0.8vw 1vw;
+                    font-weight: 600;
+                    color: $color-scale-gray-1;
+                    letter-spacing: 0.1vw;
+                    border-radius: 0.4vw;
+                    background-color: $color-scale-blue-7;
+                    font-family: 'Gabarito';
+                    font-size: 1.2vw;
+                    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+                    box-shadow: none;
+                }
+
+                button:hover {
+                    cursor: pointer;
+                    background-color: $color-scale-blue-6;
+                    color: $color-scale-white;
+                    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.3);
+                }
+
+            }
+
+        }
+
+    }
+
+    height: 100vh;
+}
