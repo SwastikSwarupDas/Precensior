@@ -121,23 +121,17 @@ $color-scale-orange-9: #3d1300;
 
         .mark-calendar {
             background-color: $color-scale-gray-9;
-            padding: 4vw 2vw;
+            padding: 2vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: $color-scale-white;
             font-family: 'Gabarito';
-
-            .card {
-
-             
-
-            }
+            border-radius: 2vw;
         }
 
 
 
-        p-datepicker-monthpicker {
-            background-color: cornflowerblue;
-            font-size: 2vw;
-        }
 
         .selection {
             display: flex;
@@ -225,8 +219,76 @@ $color-scale-orange-9: #3d1300;
     }
 }
 
-:host ::ng-deep .p-calendar .p-button {
-    /* Customize the calendar navigation buttons */
-    background-color: #007bff;
-    color: #fff;
-  }
+:host ::ng-deep .p-datepicker-prev, :host ::ng-deep .p-datepicker-next{
+    cursor: pointer;
+    background-color: $color-scale-gray-9;
+    border: none;
+    color: $color-scale-white;
+    scale: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+ 
+}
+
+:host ::ng-deep .p-datepicker-header{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+:host ::ng-deep .p-datepicker-title{
+    display: flex;
+    gap: 1vw;
+    transform: translateY(-0.2vw);
+}
+
+:host ::ng-deep .p-datepicker-month{
+    background-color: $color-scale-gray-9;
+    border: none;
+    font-size: 3vw;
+    font-weight: 600;
+    color: $color-scale-white;
+    font-family: 'Sofia';
+}
+
+:host ::ng-deep .p-datepicker-year{
+    background-color: $color-scale-gray-9;
+    border: none;
+    font-size: 3vw;
+    font-weight: 600;
+    color: $color-scale-white;
+    font-family: 'Sofia';
+}
+
+:host ::ng-deep .p-datepicker-calendar{
+    font-size: 1.4vw;
+    line-height: 3.4vw;
+}
+
+:host ::ng-deep .p-datepicker-calendar .p-element{
+    width: 4vw;
+}   
+
+
+:host ::ng-deep .p-datepicker-other-month .p-element:hover{
+    background-color: $color-scale-gray-8 !important;   
+}
+
+:host ::ng-deep .p-datepicker-calendar .p-element:hover{
+    border-radius: 1vw;
+    background-color: $color-scale-gray-5;
+}
+
+:host ::ng-deep thead{
+    color: $color-scale-blue-3;
+}
+
+:host ::ng-deep .p-datepicker-weeknumber{
+    color: $color-scale-gray-6;
+}
+
+
+

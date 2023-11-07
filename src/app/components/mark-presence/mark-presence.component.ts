@@ -18,6 +18,7 @@ export class MarkPresenceComponent {
   selectedUser:Soul|null=null;
   date: Date[] | undefined;
   proceed:boolean=true;
+  dateArray:(Date[]|undefined)[]=[];
 
   constructor(private fetchSoulService:FetchSoulsService){}
 
@@ -37,6 +38,13 @@ export class MarkPresenceComponent {
 
   datePicked(){
     console.warn(this.date);
+    if(this.date){
+      this.dateArray.push(this.date);
+      this.dateArray = this.dateArray.filter((date, index, self) => {
+        return index === self.findIndex((d) => d && JSON.stringify(d) === JSON.stringify(date));
+      });
+      console.log(this.dateArray);
+    }
   }
 
 }
